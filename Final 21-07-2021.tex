@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,bbm}
+\usepackage{tikz-cd}
+\usepackage[margin=1in]{geometry}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\fancyhead[L]{}
+\title{\includegraphics[scale=0.1]{logo.png}\\[0.5cm]\textbf{\Huge Final Exam}\\ \Large Linear Algebra\\ \Large July 23, 2023}
+\author{\Large Departamento de Matemáticas, FIUBA}
+\date{}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{\baselineskip}{0.5\baselineskip}
+
+\begin{document}
+	
+	\maketitle
+	\thispagestyle{empty}
+	
+	\section{Instructions}\label{sec:instructions}\sectionmark{Instructions}
+	\begin{enumerate}
+		\item All solutions must be presented with rigor and clarity. Justify your answers thoroughly.
+		\item When referencing any results from the course, provide proper citations or references.
+		\item Maintain a concise and legible writing style throughout your answers.
+		\item Best of luck!
+	\end{enumerate}
+	
+	\section{Exercise 1}\label{sec:e1}\sectionmark{Exercise 1}
+	Let \(V\) be a \(K\)-vector space of dimension \(n\), and let \(C = \{v_1, \ldots, v_r\} \subset V\). Prove that:
+	
+	\begin{enumerate}[label=(\roman*)]
+		\item There exists a basis \(B\) of \(V\) such that \(B \subseteq C\) if and only if \(C\) is a generating system of \(V\).
+		\item There exists a basis \(B\) of \(V\) such that \(B \supseteq C\) if and only if \(C\) is linearly independent.
+	\end{enumerate}
+	
+	\section{Exercise 2}\label{sec:e2}\sectionmark{Exercise 2}
+	Let \(K\) be a field, and let \(B = \{v_1, \ldots, v_n\}\) be a basis of \(K^n\), where \(v_i = (v_{i,1}, \ldots, v_{i,n})\) for \(i = 1, \ldots, n\). Let \(\Delta = \det((v_{i,j})_{1\leq i,j \leq n})\). For \(j = 1, \ldots, n\), the map \(\varphi_j : K^n \rightarrow K\) is defined as follows:
+	
+	\[
+	\varphi_j (x_1, \ldots, x_n) = \Delta^{-1} \cdot \det
+	\begin{pmatrix}
+		v_{1,1} & v_{1,2} & \cdots & v_{1,n} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		v_{j-1,1} & v_{j-1,2} & \cdots & v_{j-1,n} \\
+		x_1 & x_2 & \cdots & x_n \\
+		v_{j+1,1} & v_{j+1,2} & \cdots & v_{j+1,n} \\
+		\vdots & \vdots & \ddots & \vdots \\
+		v_{n,1} & v_{n,2} & \cdots & v_{n,n} \\
+	\end{pmatrix}
+	\]
+	
+	i) Verify that \(\varphi_j \in (K^n)^*\) for all \(1 \leq j \leq n\).
+	
+	ii) Prove that \(B^* = \{\varphi_1, \ldots, \varphi_n\} \subset (K^n)^*\) is the dual basis of \(B\).
+	
+iii) Let \(S = \langle v_1 - v_n, \ldots, v_{n-1} - v_n \rangle\). Find a basis for \(S^{o}\).
+
+	
+\end{document}
